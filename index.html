@@ -7,13 +7,14 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ recipe }}</p>
+        <a target="_blank" v-bind:href="recipe_link">{{ recipe_name }}</a>
         <!-- 切り替えボタン -->
         <form class="change-form" v-on:submit.prevent="change">
             <button type="submit">切り替え</button>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
