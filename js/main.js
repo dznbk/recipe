@@ -10,7 +10,7 @@ const app = new Vue({
     },
     created: function (event, value) {
         const self = this;
-        axios.get("./data/recipe_list.csv")
+        axios.get("https://storage.googleapis.com/pontaro_first_bucket/recipe/recipe_list.csv")
             .then(function(response){
                 let tmp = response.data.trim().split("\n");
                 let csv_list = [];
